@@ -64,7 +64,7 @@ jobs:
 
     steps:
       - name: Login to Artifactory
-        run: curl -u ${{ secrets.ARTIFACTORY_API_TOKEN }}: -X POST https://rtifactory.eng.tenable.com/artifactory/api/docker/auth
+        run: curl -u ${{ secrets.ARTIFACTORY_API_TOKEN }} -X POST https://rtifactory.eng.tenable.com/artifactory/api/docker/auth
   
       - name: Pull Docker Image
         run: docker pull  docker-terracan-local.artifactory.eng.tenable.com/terrascan-test/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797-8/
