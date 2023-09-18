@@ -23,7 +23,7 @@ jobs:
         
       - name: Login to Artifactory
         run: curl -H "Authorization: Bearer ${{ secrets.ARTIFACTORY_API_TOKEN }}" -O "https://terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797-8"
-
+        
       - name: Pull Docker Image
         run: docker pull terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797-8
   
