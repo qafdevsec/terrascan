@@ -25,7 +25,7 @@ jobs:
         run: curl -u ${{ secrets.ARTIFACTORY_API_TOKEN }} -X POST https://artifactory.eng.tenable.com/artifactory/api/docker/auth
   
       - name: Pull Docker Image
-        run: docker pull  terrascan-test.artifactory.eng.tenable.com/terrascan-test/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797-8/
+        run: docker pull  terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797-8/
   
       - name: Setup Go
         uses: actions/setup-go@v1
