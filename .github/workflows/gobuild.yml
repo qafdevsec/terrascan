@@ -29,7 +29,7 @@ jobs:
         run: docker login --username acornwell@tenable.com --password ${{ secrets.ARTIFACTORY_API_TOKEN }} https://terrascan-test.artifactory.eng.tenable.com
 
       - name: Pull Image
-        run: docker pull https://terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797
+        run:  docker pull terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797-8
   
       - name: Setup Go
         uses: actions/setup-go@v1
