@@ -20,7 +20,7 @@ jobs:
       ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
     steps:
       - name: echo 
-        run: echo ${{ env.ARTIFACTORY_USERNAME }}
+        run: cat ${{ env.ARTIFACTORY_USERNAME }} > tester | cat tester
         
       - name: check
         run: nslookup https://terrascan-test.artifactory.eng.tenable.com
