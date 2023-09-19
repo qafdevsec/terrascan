@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Login to Artifactory
-        run: docker login -u ${{ secrets.ARTIFACTORY_USERNAME }} -p ${{ secrets.ARTIFACTORY_API_KEY }} https://terrascan-test.artifactory.eng.tenable.com
+        run: echo ${{ secrets.ARTIFACTORY_USERNAME }} | docker login --username ${{ secrets.ARTIFACTORY_API_KEY }} --password-stdin
 
       - name: Pull Image
         run: docker pull https://terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797
