@@ -20,7 +20,7 @@ jobs:
       ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
     steps:
       - name: check proxy 
-        run: docker info | grep Proxy
+        run: docker info
         
       - name: check
         run: nslookup https://terrascan-test.artifactory.eng.tenable.com
