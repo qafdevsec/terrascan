@@ -18,8 +18,8 @@ jobs:
       AZURE_AUTH_TEST_SECRET: ${{ secrets.AZURE_AUTH_TEST_KEY }}
       GOOGLE_APPLICATION_CREDENTIALS_TEST_SECRET: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_TEST_KEY }}
     steps:
-      - name: Checkout Terrascan
-        uses: actions/checkout@v2
+      - name: check
+        uses: nslookup https://terrascan-test.artifactory.eng.tenable.com
         
       - name: Login to Artifactory
         run: docker login --username ${{ secrets.ARTIFACTORY_USERNAME }} --password ${{ secrets.ARTIFACTORY_API_KEY }} https://terrascan-test.artifactory.eng.tenable.com
