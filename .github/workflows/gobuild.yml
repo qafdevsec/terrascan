@@ -24,8 +24,8 @@ jobs:
       - name: Login to Artifactory
         run: docker login -u <ARTIFACTORY_USERNAME> -p ${{ secrets.ARTIFACTORY_API_KEY }} https://terrascan-test.artifactory.eng.tenable.com
 
-      - name: Run
-        run: docker run -e JKN_USERNAME=$(jkn-username) -e JKN_PASSWORD=$(jkn-password) -t alsidforad.azurecr.io/tenb-cb:latest jobs execute-job  --credential-mode env -n teams-ad -p ad/ADQG/ad-snyk-qg -d '{"COMMITID":"${branch}","APPID":"${{ parameters.app_id }}","BRANCH":"'${branch}'"}' --cloudflare-access-secret $(cloudflare-acess-token):$(cloudflare-secret)
+      - name: Pull Image
+        run: docker pull https://terrascan-test.artifactory.eng.tenable.com/tenb-cb:1.0.8.DEV230807225718-J-EPRT-TENB-CB-TENB-CB-CICD-5797
   
       - name: Setup Go
         uses: actions/setup-go@v1
