@@ -55,7 +55,7 @@ require (
 	github.com/stretchr/testify v1.8.1
 	github.com/zclconf/go-cty v1.10.0
 	go.uber.org/zap v1.17.0
-	golang.org/x/sys v0.5.0
+	golang.org/x/sys v0.15.0
 	golang.org/x/tools v0.1.12 // indirect
 	google.golang.org/api v0.109.0
 	google.golang.org/genproto v0.0.0-20221227171554-f9683d7f8bef
